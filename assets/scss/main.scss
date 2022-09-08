@@ -1,0 +1,187 @@
+//VARIABLES
+$violet: hsl(257, 40%, 49%);
+$magenta: hsl(300, 69%, 71%);
+
+//TYPOGRAPHY
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+body {
+  background-image: url("../img/bg-mobile.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: $violet;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  padding: 2.25rem;
+}
+
+header {
+  .logo {
+    width: 7.5rem;
+  }
+}
+
+main {
+  text-align: center;
+}
+
+.main-img {
+  img {
+    width: 100%;
+    margin-top: 3.5rem;
+  }
+}
+
+.main-body {
+  margin-top: 2rem;
+
+  h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    margin-top: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  >p {
+    margin-bottom: 1.5rem;
+  }
+
+
+  button {
+    background-color: white;
+    color: $violet;
+    font-size: .85rem;
+    border: none;
+    padding: .5rem 4.5rem;
+    -webkit-box-shadow: 6px 6px 10px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 6px 6px 10px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    transition: background-color .25s ease, color .25s ease;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: white;
+      background-color: $magenta;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4.5rem;
+
+}
+
+.attribution {
+  margin-top: 1rem;
+  text-align: center;
+
+  a {
+    font-weight: 600;
+    color: hsl(284, 100%, 83%);
+    text-decoration: none;
+    transition: color .25s ease;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $magenta;
+    }
+  }
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+
+  a {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 .4rem;
+    border-radius: 50%;
+    border: solid 1.55px white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: color .25s ease, border .25s ease;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $magenta;
+      border: solid 1.55px $magenta;
+    }
+  }
+}
+
+
+//MEDIA QUERIES
+@media screen and (min-width:768px) {
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5rem 6rem;
+    background-image: url(../img/bg-desktop.svg);
+  }
+
+  header {
+    .logo {
+      width: 13.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .main-img {
+    max-width: 55%;
+  }
+
+  .main-body {
+    max-width: 45%;
+    text-align: start;
+    margin-left: 4rem;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.15rem;
+    }
+
+    button {
+      font-size: 1.15rem;
+      padding: .8rem 4rem;
+    }
+  }
+
+  footer {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+
+  .social-media {
+    direction: row;
+
+    a {
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 1.2rem;
+    }
+  }
+}
